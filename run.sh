@@ -4,5 +4,23 @@
 Test
 '
 
-source venv/bin/activate
-python main.py
+
+check_venv(){
+  echo "Checking VENV..."
+  if [ -d venv ];
+    then
+      echo "VENV - OK!"
+    else
+      echo "Don't found VENV. Create VENV."
+      python3 -m venv venv
+      check_venv
+  fi
+}
+
+
+check_venv
+
+#exec python -m pip install --upgrade pip
+#
+#source venv/bin/activate
+#python main.py
