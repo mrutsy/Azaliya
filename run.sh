@@ -10,10 +10,12 @@ check_venv(){
   if [ -d venv ];
     then
       echo "VENV - OK!"
-      python3 -m pip install --user --upgrade pip
+      source venv/bin/activate
+      python -m ensurepip --upgrade
+      pip --version
     else
       echo "Don't found VENV. Create VENV."
-      python3 -m venv venv
+      python -m venv venv
       check_venv
   fi
 }
