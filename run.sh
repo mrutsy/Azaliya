@@ -14,6 +14,7 @@ check_venv(){
       python -m ensurepip --upgrade
       pip --version
       pip install -r ./modules.txt
+      python main.py
     else
       echo "Don't found VENV. Create VENV."
       python -m venv venv
