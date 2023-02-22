@@ -13,6 +13,7 @@ check_venv(){
       source venv/bin/activate
       python -m ensurepip --upgrade
       pip --version
+      pip install -r ./modules.txt
     else
       echo "Don't found VENV. Create VENV."
       python -m venv venv
