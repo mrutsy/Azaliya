@@ -11,3 +11,4 @@ if __name__ == '__main__':
     # play(song)
 
     song = AudioSegment.from_ogg(os.path.join(os.getcwd(), "data/start.ogg"))
+    play(song)
