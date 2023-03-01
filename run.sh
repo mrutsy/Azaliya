@@ -13,7 +13,7 @@ check_venv(){
       source venv/bin/activate
       python -m ensurepip --upgrade
       pip --version
-      pip install -r modules.txt
+      pip install -r /opt/Azaliya/modules.txt
       python main.py
     else
       echo "Don't found VENV. Create VENV."

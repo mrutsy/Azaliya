@@ -9,19 +9,22 @@ if __name__ == '__main__':
     # # you can also read from other formats such as MP4
     # # song = AudioSegment.from_file("audio_file.mp4", "mp4")
     # play(song)
-    song = AudioSegment.from_ogg("data/start.ogg")
+
+    song = AudioSegment.from_ogg(os.path.join(os.getcwd(), "data/start.ogg"))
     play(song)
-    song = AudioSegment.from_ogg("data/about_me.ogg")
+    song = AudioSegment.from_ogg(os.path.join(os.getcwd(), "data/about_me.ogg"))
     play(song)
 
     def play_azaliya(url):
+        print(url)
         music = AudioSegment.from_mp3(url)
         play(music)
 
     dir_music = os.scandir("data/music")
+
     while True:
         for _ in dir_music:
-            play_azaliya(os.path.join(_))
+            play_azaliya(os.path.join(os.getcwd(), _))
         # print(os.path.join("data", "music", _))
         # print(_)
     # print(dir_music)
