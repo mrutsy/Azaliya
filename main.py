@@ -1,5 +1,7 @@
 import os
 import json
+import sys
+
 from pydub import AudioSegment
 from pydub.playback import play
 
@@ -13,7 +15,7 @@ if __name__ == '__main__':
         with open('configs/settings.json', 'w') as f:
             json.dump(settings, f)
         print("restart")
-        exit(os.system("/bin/sh -c 'exit && exit'"))
+        sys.exit(0)
 
     else:
         settings['restart'] = 'true'
