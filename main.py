@@ -10,9 +10,9 @@ if __name__ == '__main__':
     # # song = AudioSegment.from_file("audio_file.mp4", "mp4")
     # play(song)
 
-    song = AudioSegment.from_ogg(os.path.join(os.getcwd(), "data/start.ogg"))
+    song = AudioSegment.from_ogg(os.path.join(os.getcwd(), "/opt/Azaliya/data/start.ogg"))
     play(song)
-    song = AudioSegment.from_ogg(os.path.join(os.getcwd(), "data/about_me.ogg"))
+    song = AudioSegment.from_ogg(os.path.join(os.getcwd(), "/opt/Azaliya/data/about_me.ogg"))
     play(song)
 
     def play_azaliya(url):
@@ -20,7 +20,7 @@ if __name__ == '__main__':
         music = AudioSegment.from_mp3(url)
         play(music)
 
-    dir_music = os.scandir("data/music")
+    dir_music = os.scandir("/opt/Azaliya/data/music")
 
     while True:
         for _ in dir_music:
