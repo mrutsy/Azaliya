@@ -1,6 +1,7 @@
 import os
 import json
 import sys
+import time
 
 from pydub import AudioSegment
 from pydub.playback import play
@@ -17,7 +18,7 @@ if __name__ == '__main__':
         print("restart")
         song = AudioSegment.from_ogg(os.path.join(os.getcwd(), "data/ping.ogg"))
         play(song)
-        sys.exit(0)
+        time.sleep(1)
 
     else:
         settings['restart'] = 'true'
