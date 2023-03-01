@@ -13,7 +13,8 @@ if __name__ == '__main__':
         with open('configs/settings.json', 'w') as f:
             json.dump(settings, f)
         print("restart")
-        os.system("/bin/sh -c 'exit'")
+        exit(os.system("/bin/sh -c 'exit && exit'"))
+
     else:
         settings['restart'] = 'true'
         with open('configs/settings.json', 'w') as f:
