@@ -11,9 +11,9 @@ check_venv(){
     then
       echo "VENV - OK!"
       source venv/bin/activate
-      python -m ensurepip --upgrade
-      pip --version
-      pip install -r modules.txt
+#      python -m ensurepip --upgrade
+#      pip --version
+#      pip install -r modules.txt
       python main.py
     else
       echo "Don't found VENV. Create VENV."

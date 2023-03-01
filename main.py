@@ -15,6 +15,8 @@ if __name__ == '__main__':
         with open('configs/settings.json', 'w') as f:
             json.dump(settings, f)
         print("restart")
+        song = AudioSegment.from_ogg(os.path.join(os.getcwd(), "data/ping.ogg"))
+        play(song)
         sys.exit(0)
 
     else:
